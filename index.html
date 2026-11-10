@@ -34,7 +34,7 @@
       [data-r="callbar"] { display: flex !important; }
       footer { padding-bottom: 96px !important; }
       header [data-r="hdr"] { padding: 10px 16px 0 !important; gap: 4px !important; }
-      header [data-r="logo"] span:first-child { font-size: 21px !important; }
+      header [data-r="logo"] a:first-child { font-size: 21px !important; } header [data-r="logo"] a:last-child { font-size: 12px !important; }
       header [data-r="nav"] { flex-wrap: nowrap !important; overflow-x: auto; width: 100%; justify-content: flex-start !important; gap: 4px 20px !important; padding-bottom: 2px; }
       header [data-r="nav"] a { white-space: nowrap; padding: 13px 2px !important; font-size: 13px !important; }
       header [data-r="navcta"] { white-space: nowrap; flex-shrink: 0; padding: 11px 14px !important; font-size: 12px !important; }
@@ -65,11 +65,11 @@
 
 <!-- HEADER -->
 <header style="position: sticky; top: 0; z-index: 100; min-height: 76px; background: #F4EBDC; border-bottom: 1px solid rgba(60,45,25,0.18);">
-  <div data-r="hdr" style="max-width: 1280px; margin: 0 auto; padding: 10px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px;">
-    <a data-r="logo" href="#" onClick="{{ goHome }}" style="text-decoration: none; display: flex; flex-direction: column; flex-shrink: 0;">
-      <span style="font-family: 'DM Serif Display', serif; font-size: 24px; color: #1B3A2D; line-height: 1.1;">Mark's Christmas Trees</span>
-      <span style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #5C4423; font-weight: 700; margin-top: 3px;">Millgrove, Ontario</span>
-    </a>
+    <div data-r="hdr" style="max-width: 1280px; margin: 0 auto; padding: 10px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px;">
+    <div data-r="logo" style="display: flex; flex-direction: column; flex-shrink: 0;">
+      <a href="#" onClick="{{ goHome }}" style="font-family: 'DM Serif Display', serif; font-size: 24px; color: #1B3A2D; line-height: 1.1; text-decoration: none;">Mark's Christmas Trees</a>
+      <a href="https://maps.app.goo.gl/3tSGinByVzEzifEy8" target="_blank" rel="noopener" style="font-size: 13px; letter-spacing: 0.04em; color: #5C4423; font-weight: 700; margin-top: 4px; text-decoration: none;" style-hover="color: #8E2A32; text-decoration: underline;">1233 Safari Road, Millgrove, ON L8B 1A4</a>
+    </div>
     <nav data-r="nav" style="display: flex; align-items: center; gap: 8px 24px; flex-wrap: wrap; justify-content: flex-end;">
       <sc-for list="{{ nav }}" as="n" hint-placeholder-count="5">
         <a href="#" onClick="{{ n.go }}" style="font-size: 14px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none; color: #2C2416; padding: 6px 0; border-bottom: {{ n.border }};">{{ n.label }}</a>
@@ -118,6 +118,7 @@
       <p style="font-size: 17px; color: #FFFFFF;"><strong style="color: #E3C79A;">Weekends</strong> Nov 28 – Dec 20, 2026 · 10 am – 4 pm</p>
       <p style="font-size: 17px; color: #FFFFFF;"><strong style="color: #E3C79A;">Weekdays and Christmas Eve</strong> by appointment only</p>
       <p style="font-size: 17px; color: #FFFFFF;"><strong style="color: #E3C79A;">Santa will be here</strong> Sat, Dec 12 · 11 am – 2 pm</p>
+    <p style="font-size: 17px; color: #FFFFFF;">We will have a few local artisans in the barn while Santa is visiting!</p>
     </div>
   </div>
 
@@ -126,6 +127,20 @@
       <div><p style="font-family: 'DM Serif Display', serif; font-size: 30px; color: #1B3A2D; line-height: 1.2; margin-bottom: 8px;">No chemicals. No pesticides.</p><p style="font-size: 19px; color: #3d3326; line-height: 1.55;">Grown the natural way, and a big reason families return.</p></div>
       <div><p style="font-family: 'DM Serif Display', serif; font-size: 30px; color: #1B3A2D; line-height: 1.2; margin-bottom: 8px;">Watershed stewards.</p><p style="font-size: 19px; color: #3d3326; line-height: 1.55;">Our trees grow next to a pond that feeds into Spencer Creek. We protect the water and the land.</p></div>
       <div><p style="font-family: 'DM Serif Display', serif; font-size: 30px; color: #1B3A2D; line-height: 1.2; margin-bottom: 8px;">Trees with character.</p><p style="font-size: 19px; color: #3d3326; line-height: 1.55;">Walk the woods and find one that is meant for you.</p></div>
+    </div>
+  </section>
+  <section style="background: #F0E6D3; padding: 100px 40px;">
+    <div style="max-width: 1280px; margin: 0 auto;">
+      <p style="font-size: 16px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #7A5C32; margin-bottom: 16px;">Fresh greens</p>
+      <h2 style="font-family: 'DM Serif Display', serif; font-size: clamp(30px, 3.2vw, 42px); color: #1B3A2D; line-height: 1.15; margin-bottom: 18px; max-width: 700px;">Make your own wreaths, swags and planters.</h2>
+      <p style="font-size: 18px; color: #3d3326; line-height: 1.7; max-width: 700px; margin-bottom: 12px;">We have fresh greens of various types and sizes at very reasonable prices for planters, swags, wreaths and festive arrangements, as well as pinecones, dogwood branches and natural, handmade wreaths that can be repurposed throughout the seasons. Branches can be beautifully arranged and decorated in vases for small spaces.</p>
+      <p style="font-size: 18px; color: #3d3326; line-height: 1.7; max-width: 700px; margin-bottom: 40px;">Proceeds from decorative items and all donations go to War Child Canada.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px;">
+        <figure style="margin: 0;"><img src="photos/new/vase.jpg" alt="Fresh branches arranged in a vase with red ornaments" loading="lazy" style="width: 100%; height: 360px; object-fit: cover; border-radius: 6px; display: block;"></figure>
+        <figure style="margin: 0;"><img src="photos/visit/p14.jpg" alt="Two people arranging fresh greens at a table" loading="lazy" style="width: 100%; height: 360px; object-fit: cover; border-radius: 6px; display: block;"></figure>
+        <figure style="margin: 0;"><img src="photos/visit/p13.jpg" alt="Two friends holding a wreath made from farm greens" loading="lazy" style="width: 100%; height: 360px; object-fit: cover; border-radius: 6px; display: block;"></figure>
+        <figure style="margin: 0;"><img src="photos/evergreen-table-arrangement-wide.webp" alt="An evergreen and orange rose centrepiece on a table" loading="lazy" style="width: 100%; height: 360px; object-fit: cover; border-radius: 6px; display: block;"></figure>
+      </div>
     </div>
   </section>
 
@@ -139,21 +154,10 @@
         <p style="font-size: 17px; color: #3d3326; line-height: 1.75;">There is something for everyone, including wall and corner trees that won’t take over, but fit in with the rest of the family.</p>
       </div>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-        <img src="photos/mature-tree-canopy-wide.webp" alt="Mature tree canopy light through the farm woodland" style="grid-column: 1 / -1; width: 100%; height: 300px; object-fit: cover; border-radius: 6px; display: block;">
-        <img src="photos/new/swans.jpg" alt="The farm pond at dusk" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px; display: block;">
-        <img src="photos/meadow-and-evergreens-wide.webp" alt="Meadow bordered by evergreens" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px; display: block;">
-      </div>
-    </div>
-  </section>
-
-  <section style="background: #F0E6D3; padding: 100px 40px;">
-    <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 56px; align-items: center;">
-      <img src="photos/greenery-and-gift-display-wide.webp" alt="Fresh Christmas greens and festive arrangements" style="width: 100%; height: 400px; object-fit: cover; border-radius: 6px; display: block;">
-      <div>
-        <p style="font-size: 16px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #7A5C32; margin-bottom: 16px;">Fresh Greens</p>
-        <h2 style="font-family: 'DM Serif Display', serif; font-size: clamp(30px, 3.2vw, 42px); color: #1B3A2D; line-height: 1.15; margin-bottom: 20px;">Make your own wreaths, swags and planters.</h2>
-        <p style="font-size: 17px; color: #3d3326; line-height: 1.75; margin-bottom: 28px;">We have fresh greens of various types and sizes at very reasonable prices for planters, swags, wreaths and festive arrangements, as well as pinecones, dogwood branches and natural, handmade wreaths that can be repurposed throughout the seasons.</p>
-        <a href="#" onClick="{{ goTrees }}" style="display: inline-block; padding: 14px 28px; background: #8E2A32; color: #FFFFFF; font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 4px;" style-hover="background: #6F1F26; color: #FFFFFF;">See trees &amp; prices</a>
+        <img src="photos/mature-tree-canopy-wide.webp" alt="Mature tree canopy light through the farm woodland" style="width: 100%; height: 240px; object-fit: cover; border-radius: 6px; display: block;">
+        <img src="photos/new/swans.jpg" alt="The farm pond at dusk" style="width: 100%; height: 240px; object-fit: cover; border-radius: 6px; display: block;">
+        <img src="photos/meadow-and-evergreens-wide.webp" alt="Meadow bordered by evergreens" style="width: 100%; height: 240px; object-fit: cover; border-radius: 6px; display: block;">
+        <img src="photos/snow-covered-evergreens-square.webp" alt="Snow-covered evergreens on the farm" loading="lazy" style="width: 100%; height: 240px; object-fit: cover; border-radius: 6px; display: block;">
       </div>
     </div>
   </section>
@@ -241,7 +245,7 @@
       <p style="font-size: 16px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #E3C79A; margin-bottom: 16px; text-align: center; font-size: 18px; letter-spacing: 0.2em;">Choose Your Tree</p>
       <h2 style="font-family: 'DM Serif Display', serif; font-size: clamp(34px, 4vw, 54px); color: #FFFFFF; line-height: 1.1; margin-bottom: 20px; text-align: center;">Cut your own, from our woods.</h2>
       <p style="font-size: 18px; color: #FFFFFF; max-width: 640px; margin: 0 auto 14px; text-align: center;">Our trees range in size and shape, from Charlie Brown to mature and majestic. Wall and corner trees will fit right in. Come early in the season for the best choice.</p>
-      <p style="font-size: 18px; color: #FFFFFF; max-width: 640px; margin: 0 auto 56px; text-align: center;">Branches of fresh greens, dogwood and pinecones, along with natural, handmade wreaths, are available for all your decorating needs.</p>
+      <p style="font-size: 18px; color: #FFFFFF; max-width: 640px; margin: 0 auto 56px; text-align: center;">Branches of fresh greens, dogwood and pinecones, along with natural, handmade wreaths, are available for all your decorating needs. Branches can be beautifully arranged and decorated in vases for small spaces.</p>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
         <div style="border: 1px solid rgba(255,255,255,0.28); border-radius: 8px; padding: 28px 24px;"><h3 style="font-family: 'DM Serif Display', serif; font-size: 24px; color: #FFFFFF; margin-bottom: 6px;">White Pine</h3><p style="font-size: 15px; color: #F4EBDC;">Soft needles, graceful shape, perfect for white fairy lights and delicate ornaments!</p></div>
         <div style="border: 1px solid rgba(255,255,255,0.28); border-radius: 8px; padding: 28px 24px;"><h3 style="font-family: 'DM Serif Display', serif; font-size: 24px; color: #FFFFFF; margin-bottom: 6px;">Balsam Fir</h3><p style="font-size: 15px; color: #F4EBDC;">The classic Christmas scent.</p></div>
@@ -279,12 +283,13 @@
     <div style="max-width: 1280px; margin: 0 auto;">
       <p style="font-size: 16px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #7A5C32; margin-bottom: 16px;">Fresh greens</p>
       <h2 style="font-family: 'DM Serif Display', serif; font-size: clamp(30px, 3.2vw, 42px); color: #1B3A2D; line-height: 1.15; margin-bottom: 18px; max-width: 700px;">Make your own wreaths, swags and planters.</h2>
-      <p style="font-size: 17px; color: #3d3326; line-height: 1.7; max-width: 700px; margin-bottom: 12px;">We have fresh greens of various types and sizes at very reasonable prices for planters, swags, wreaths and festive arrangements, as well as pinecones, dogwood branches and natural, handmade wreaths that can be repurposed throughout the seasons.</p>
+      <p style="font-size: 17px; color: #3d3326; line-height: 1.7; max-width: 700px; margin-bottom: 12px;">We have fresh greens of various types and sizes at very reasonable prices for planters, swags, wreaths and festive arrangements, as well as pinecones, dogwood branches and natural, handmade wreaths that can be repurposed throughout the seasons. Branches can be beautifully arranged and decorated in vases for small spaces.</p>
       <p style="font-size: 17px; color: #3d3326; line-height: 1.7; max-width: 700px; margin-bottom: 40px;">Proceeds from decorative items and all donations go to War Child Canada.</p>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px;">
         <figure style="margin: 0;"><img src="photos/visit/p14.jpg" alt="Two people arranging fresh greens at a table" loading="lazy" style="width: 100%; height: 380px; object-fit: cover; border-radius: 6px; display: block;"></figure>
         <figure style="margin: 0;"><img src="photos/visit/p13.jpg" alt="Two friends holding a wreath made from farm greens" loading="lazy" style="width: 100%; height: 380px; object-fit: cover; border-radius: 6px; display: block;"></figure>
         <figure style="margin: 0;"><img src="photos/new/vase.jpg" alt="Fresh branches arranged in a vase with red ornaments" loading="lazy" style="width: 100%; height: 380px; object-fit: cover; border-radius: 6px; display: block;"></figure>
+        <figure style="margin: 0;"><img src="photos/evergreen-table-arrangement-wide.webp" alt="An evergreen and orange rose centrepiece on a table" loading="lazy" style="width: 100%; height: 380px; object-fit: cover; border-radius: 6px; display: block;"></figure>
       </div>
     </div>
   </section>
@@ -316,7 +321,7 @@
         <p style="font-size: 17px; color: #FFFFFF; line-height: 1.5;"><strong style="color: #E3C79A; display: block;">Arrive by 3 pm</strong>You will need the daylight.</p>
         <p style="font-size: 17px; color: #FFFFFF; line-height: 1.5;"><strong style="color: #E3C79A; display: block;">Bring a saw</strong>Or borrow ours. Adults only.</p>
         <p style="font-size: 17px; color: #FFFFFF; line-height: 1.5;"><strong style="color: #E3C79A; display: block;">Wear boots and gloves</strong>The ground is rocky and uneven.</p>
-        <p style="font-size: 17px; color: #FFFFFF; line-height: 1.5;"><strong style="color: #E3C79A; display: block;">Bring cash</strong>Cash is preferred. E-transfer is also accepted. No credit cards or ATM on site.</p>
+        <p style="font-size: 17px; color: #FFFFFF; line-height: 1.5;"><strong style="color: #E3C79A; display: block;">How can I pay?</strong>Cash is preferred. E-transfer is also accepted. No credit cards or ATM on site.</p>
       </div>
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 20px; align-items: start;">
@@ -325,6 +330,7 @@
         <div style="padding: 0 32px;">
           <h3 style="font-family: 'DM Serif Display', serif; font-size: 24px; line-height: 1.25; color: #FFFFFF; margin-bottom: 14px;">Santa will be visiting the farm to see his friends, both small and tall.</h3>
           <p style="font-size: 16px; color: #FFFFFF; margin-bottom: 8px;"><strong style="color: #F8E3B8;">Saturday, December 12, 2026 · 11 am – 2 pm</strong></p>
+          <p style="font-size: 16px; color: #FFFFFF; margin-bottom: 8px;">We will have a few local artisans in the barn while Santa is visiting!</p>
           <p style="font-size: 16px; color: #FFFFFF; margin-bottom: 16px;">Photos and a chat with Santa are free of charge.</p>
           <p style="font-size: 15px; color: #FFFFFF; line-height: 1.6;">Any donations made will go to War Child Canada, a charity near and dear to the heart of our late and beloved Teddy. Injured as a child, by ‘friendly fire’ in Holland during the Second World War, he never let it stop him from living life to the fullest. We miss him even more than he loved living here, and getting to go outside and “play in the dirt!” We carry on as he would expect, with good cheer and gratitude for the privilege of playing a part in your holiday tradition.</p>
         </div>
@@ -353,12 +359,16 @@
         <p style="font-size: 16px; color: #2C2416; margin-bottom: 8px;">Paths are fine for strollers; the fields are trickier. We have a few sleds or you can bring your own.</p>
         <p style="font-size: 16px; color: #2C2416;">Wheelchair access on driveway and around the house is manageable, but would be difficult on the walking paths, especially when there is snow.</p>
       </div>
-      <div style="background: #FFFFFF; border: 1px solid rgba(60,45,25,0.2); border-radius: 8px; padding: 32px; overflow: hidden;">
-        <img src="photos/new/austin.jpg" alt="Austin the dog in reindeer antlers beside the War Child Fund table" loading="lazy" style="width: calc(100% + 64px); max-width: none; margin: -32px -32px 22px; height: 300px; object-fit: cover; object-position: center 60%; display: block;">
-        <h3 style="font-family: 'DM Serif Display', serif; font-size: 22px; color: #1B3A2D; margin-bottom: 14px;">We are dog friendly</h3>
-        <p style="font-size: 16px; color: #2C2416;">Dogs are welcome on a leash.</p>
-      </div>
     </div>
+    <div style="background: #F0E6D3; border-radius: 8px; overflow: hidden; margin-top: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-items: stretch;">
+        <img src="photos/new/dog-snow-tree.jpg" alt="A puppy bounding through the snow as a family carries their tree down a woodland trail" loading="lazy" style="width: 100%; height: 100%; min-height: 340px; aspect-ratio: 4/3; object-fit: cover; display: block;">
+        <div style="padding: 44px 44px; display: flex; flex-direction: column; justify-content: center; gap: 18px;">
+          <p style="font-size: 16px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #7A5C32;">Four-legged family</p>
+          <h3 style="font-family: 'DM Serif Display', serif; font-size: clamp(30px, 3.2vw, 42px); line-height: 1.12; color: #1B3A2D;">We are dog friendly.</h3>
+          <p style="font-size: 18px; color: #2C2416; line-height: 1.6;">Dogs are welcome on a leash. Bring the whole family along on the trail.</p>
+          <img src="photos/new/austin.jpg" alt="Austin the dog in reindeer antlers beside the War Child Fund table" loading="lazy" style="width: 100%; max-width: 360px; height: 220px; object-fit: cover; object-position: center 60%; border-radius: 6px; display: block;">
+        </div>
+      </div>
   </section>
 
   <section style="max-width: 1180px; margin: 0 auto; padding: 96px 40px;">
@@ -406,6 +416,7 @@
         <a href="https://maps.app.goo.gl/3tSGinByVzEzifEy8" target="_blank" rel="noopener" style="display: inline-block; padding: 14px 28px; background: #8E2A32; color: #FFFFFF; font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 4px;" style-hover="background: #6F1F26; color: #FFFFFF;">Open in Google Maps</a>
         <img src="photos/road-and-sign.jpg" alt="The farm sign on Safari Road: Mark's Xmas Trees and More, 1233 Safari Rd." style="display: block; width: 100%; max-width: 300px; margin-top: 36px; border-radius: 6px; border: 4px solid #FFFFFF; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
         <p style="font-size: 14px; color: #5C4423; margin-top: 10px;">The sign to look for.</p>
+      <a href="https://www.instagram.com/marks.christmastrees/" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 14px; margin-top: 28px; text-decoration: none; color: #1B3A2D; font-size: 17px; font-weight: 700;" style-hover="color: #8E2A32;"><img src="photos/instagram-qr.png" alt="Instagram QR code for @marks.christmastrees" loading="lazy" style="width: 110px; height: 110px; border-radius: 6px; border: 1px solid rgba(60,45,25,0.2); display: block;"><span>Follow along on Instagram<br><span style="font-weight: 400;">@marks.christmastrees</span></span></a>
       </div>
       <div data-r="map" style="min-height: 460px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(60,45,25,0.2);">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2901.1207285972223!2d-80.0753742!3d43.3535852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882c8018960465f7%3A0x3065dab6a1a70c67!2s1233%20Safari%20Rd%2C%20Hamilton%2C%20ON%20L8B%201A4%2C%20Canada!5e0!3m2!1sen!2sin!4v1793088492179!5m2!1sen!2sin" title="Map to Mark's Christmas Trees" loading="lazy" style="border: 0; width: 100%; height: 100%; min-height: 460px; display: block;"></iframe>
@@ -501,7 +512,7 @@
       <p style="font-size: 16px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #7A5C32; margin-bottom: 14px;">Family traditions</p>
       <h2 style="font-family: 'DM Serif Display', serif; font-size: clamp(30px, 3.4vw, 44px); color: #1B3A2D; line-height: 1.1;">Every year, a new memory.</h2>
     </div>
-    <div style="overflow: hidden; width: 100%;"><div data-r="track" style="display: flex; gap: 12px; width: max-content; animation: mctScroll 90s linear infinite;" style-hover="animation-play-state: paused;"><img src="photos/new/family-snow.jpg" alt="A family beside their tree in the snow" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/c-autumn.jpg" alt="An autumn walk on the farm" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/p22.jpg" alt="Santa at the fence with a friend" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/f1.jpg" alt="A family of six by their tree in the snow" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/f2.jpg" alt="A family of eight by their tree on a sunny day" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/p01.jpg" alt="A family and their dog in the snow" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/c-carrying.jpg" alt="A family carrying their tree" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/p23.jpg" alt="A group beside their tree" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/p04.jpg" alt="Children and parents beside their tree" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/c-home.jpg" alt="A tree at home" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/p19.jpg" alt="Gathered in the barn" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/c-loading.jpg" alt="Loading the tree" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/family-saw.jpg" alt="A family of four with their saw and the tree they chose" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/santa-teens.jpg" alt="Santa with two teens and their tree" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/family-snow.jpg" alt="A family beside their tree in the snow" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/c-autumn.jpg" alt="An autumn walk on the farm" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/p22.jpg" alt="Santa at the fence with a friend" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/f1.jpg" alt="A family of six by their tree in the snow" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/f2.jpg" alt="A family of eight by their tree on a sunny day" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/p01.jpg" alt="A family and their dog in the snow" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/c-carrying.jpg" alt="A family carrying their tree" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/p23.jpg" alt="A group beside their tree" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/p04.jpg" alt="Children and parents beside their tree" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/c-home.jpg" alt="A tree at home" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/p19.jpg" alt="Gathered in the barn" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/c-loading.jpg" alt="Loading the tree" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/family-saw.jpg" alt="A family of four with their saw and the tree they chose" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/santa-teens.jpg" alt="Santa with two teens and their tree" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"></div></div>
+    <div style="overflow: hidden; width: 100%;"><div data-r="track" style="display: flex; gap: 12px; width: max-content; animation: mctScroll 90s linear infinite;" style-hover="animation-play-state: paused;"><img src="photos/new/family-snow.jpg" alt="A family beside their tree in the snow" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/c-autumn.jpg" alt="An autumn walk on the farm" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/p22.jpg" alt="Santa at the fence with a friend" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/f1.jpg" alt="A family of six by their tree in the snow" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/f2.jpg" alt="A family of eight by their tree on a sunny day" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/p01.jpg" alt="A family and their dog in the snow" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/c-carrying.jpg" alt="A family carrying their tree" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/p23.jpg" alt="A group beside their tree" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/p04.jpg" alt="Children and parents beside their tree" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/c-home.jpg" alt="A tree at home" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/p19.jpg" alt="Gathered in the barn" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/c-loading.jpg" alt="Loading the tree" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/family-saw.jpg" alt="A family of four with their saw and the tree they chose" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/santa-teens.jpg" alt="Santa with two teens and their tree" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/family-snow.jpg" alt="A family beside their tree in the snow" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/c-autumn.jpg" alt="An autumn walk on the farm" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/p22.jpg" alt="Santa at the fence with a friend" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/f1.jpg" alt="A family of six by their tree in the snow" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/f2.jpg" alt="A family of eight by their tree on a sunny day" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/p01.jpg" alt="A family and their dog in the snow" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/c-carrying.jpg" alt="A family carrying their tree" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/p23.jpg" alt="A group beside their tree" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/p04.jpg" alt="Children and parents beside their tree" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/c-home.jpg" alt="A tree at home" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/visit/p19.jpg" alt="Gathered in the barn" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/c-loading.jpg" alt="Loading the tree" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/family-saw.jpg" alt="A family of four with their saw and the tree they chose" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/santa-teens.jpg" alt="Santa with two teens and their tree" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"><img src="photos/new/trail-selfie.jpg" alt="A smiling selfie on the trail with her family walking behind" loading="lazy" style="height: 400px; width: auto; flex: none; border-radius: 6px; display: block;"></div></div>
   </section>
 </div>
 </sc-if>
@@ -561,12 +572,14 @@
         <p style="font-family: 'DM Serif Display', serif; font-size: 26px; color: #FFFFFF; margin-bottom: 8px;">Mark's Christmas Trees</p>
         <p style="font-size: 16px; color: #F4EBDC;">1233 Safari Road, Millgrove, ON L8B 1A4</p>
         <p style="font-size: 16px; color: #F4EBDC;">905 842-1332 · nimmikhurana@msn.com</p>
+        <a href="https://www.instagram.com/marks.christmastrees/" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 14px; margin-top: 18px; text-decoration: none; color: #F4EBDC; font-size: 16px; font-weight: 700;" style-hover="color: #E3C79A;"><img src="photos/instagram-qr.png" alt="Instagram QR code for @marks.christmastrees" loading="lazy" style="width: 96px; height: 96px; border-radius: 6px; background: #FFFFFF; display: block;"><span>Follow us on Instagram<br><span style="font-weight: 400;">@marks.christmastrees</span></span></a>
       </div>
       <div>
         <p style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #E3C79A; margin-bottom: 8px;">2026 Season</p>
         <p style="font-size: 16px; color: #F4EBDC;">Weekends Nov 28 – Dec 20 · 10 am – 4 pm</p>
         <p style="font-size: 16px; color: #F4EBDC;">Weekdays and Christmas Eve by appointment only</p>
         <p style="font-size: 16px; color: #F4EBDC;">Santa will be here Sat, Dec 12 · 11 am – 2 pm</p>
+        <p style="font-size: 16px; color: #F4EBDC;">We will have a few local artisans in the barn while Santa is visiting!</p>
       </div>
     </div>
     <nav style="display: flex; flex-wrap: wrap; gap: 8px 28px; padding-top: 28px;">
@@ -640,7 +653,7 @@ class Component extends DCLogic {
       ['Which varieties do you have?', 'Cedar, balsam fir, majestic spruce, white pine and Scotch pine.'],
       ['Are all trees cut-your-own?', 'Yes. We also have branches that can be beautifully assembled in vases for small spaces.'],
       ['How much are trees?', 'Prices include tax and are the same for every variety, from $80 for smaller trees up to 5 ft. See the full price list on the Trees & Prices page.'],
-      ['What else do you have besides trees?', 'We have fresh greens of various types and sizes at very reasonable prices for planters, swags, wreaths and festive arrangements, as well as pinecones, dogwood branches and natural, handmade wreaths that can be repurposed throughout the seasons. Proceeds from decorative items and all donations go to War Child Canada.'],
+      ['What else do you have besides trees?', 'We have fresh greens of various types and sizes at very reasonable prices for planters, swags, wreaths and festive arrangements, as well as pinecones, dogwood branches and natural, handmade wreaths that can be repurposed throughout the seasons. Proceeds from decorative items and all donations go to War Child Canada. We will also have a small artisan market in the barn during Santa’s visit.'],
             ['Do you deliver?', 'No. Cut your own and take it with you.'],
             { h: 'Payment' },
       ['How can I pay?', 'Cash is preferred, and e-transfer to nimmikhurana@msn.com is also fine. No credit cards or ATM on site.'],
@@ -654,7 +667,7 @@ class Component extends DCLogic {
       ['What should I know before bringing young children?', 'Dress them warmly and bring snacks. The ground is rocky with stumps and vines, strollers suit the paths but not the fields, and saws are for adults only. The barn offers shelter and seating, and if nature calls you are welcome in our home.'],
       ['Are dogs welcome?', 'Yes, dogs are welcome on a leash.'],
       ['Are there washrooms or somewhere to warm up?', 'There are no public toilets, but if nature calls, you are welcome in our home. The barn is not heated but shelters you from the elements, with benches, tables and chairs.'],
-      ['Is Santa visiting?', 'Yes. Santa will be here on Saturday, December 12, 2026 from 11 am to 2 pm. Photos and a chat are free, and donations to War Child Canada are appreciated.'],
+      ['Is Santa visiting?', 'Yes. Santa will be here on Saturday, December 12, 2026 from 11 am to 2 pm. Photos and a chat are free, and donations to War Child Canada are appreciated. We will also have a small artisan market in the barn during Santa’s visit.'],
       { h: 'After Your Visit' },
       ['How do I keep my tree fresh?', 'Give it a fresh cut before putting it in water, and check the water level often. It will drink a lot.'],
       ['Who do I contact with questions?', 'Call or text 905 842-1332, or email nimmikhurana@msn.com.'],
